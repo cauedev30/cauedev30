@@ -32,12 +32,6 @@ Gestão de contratos de aluguel com extração de dados via LLM, RLS e TDD.
 
 **Back-end e full stack:** Python · FastAPI · SQLAlchemy · TypeScript · Node.js · React · Next.js · PostgreSQL (Supabase, RLS) · APIs REST e webhooks · Clean Architecture · Docker · Dokku · CI/CD com GitHub Actions · Pytest · Vitest · Playwright · Cloudflare Workers
 
-### Outros repositórios
-
-[Projeto-FullStack-ReNTAI](https://github.com/cauedev30/Projeto-FullStack-ReNTAI) · [Gerenciador-de-estoque-padaria](https://github.com/cauedev30/Gerenciador-de-estoque-padaria) · [projeto-movie-manager](https://github.com/cauedev30/projeto-movie-manager) · [portfolio](https://cauedev30.github.io/portfolio-caue-franco/)
-
 ### Contato
 
 [LinkedIn](https://www.linkedin.com/in/cauefranco01/) · cauefranco01@gmail.com
-
-📍 João Pessoa - PB · Análise e Desenvolvimento de Sistemas
