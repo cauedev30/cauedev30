@@ -25,7 +25,7 @@ Não entrego só features. Construo sistemas observáveis e fáceis de manter, e
 
 [**chatbot-atendimento-geniai**](https://github.com/cauedev30/chatbot-atendimento-geniai)
 
-Mesa de suporte da GeniAI: um agente LLM que roda como bot do Chatwoot, um kanban para a equipe e uma página de indicadores. A triagem, que era manual, passou a ser feita pelo agente, acelerando a etapa em 100%.
+Mesa de suporte da GeniAI: um agente LLM que roda como bot do Chatwoot, um kanban para a equipe e uma página de indicadores. A triagem, que era manual, passou a ser 100% automática.
 
 **O que o agente faz.** Identifica o atendente da unidade pelo telefone e abre o ticket na hora. Tenta uma resposta do FAQ, enviada exatamente como a equipe escreveu, e responde até três dúvidas sobre ela usando só a base de conhecimento daquele item. Pergunta fora da base, quarta pergunta ou pedido de atendente vão para uma pessoa, com o resumo no ticket. Junta rajadas de mensagens curtas num turno só, lê imagens e transcreve áudios, que passam a valer como texto em todas as regras.
 
