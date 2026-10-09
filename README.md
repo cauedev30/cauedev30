@@ -2,41 +2,35 @@
 
 **AI Full Stack Engineer.** Construo agentes de LLM e o produto inteiro em volta deles: back-end, interface, integrações e deploy. Hoje na **GeniAI**.
 
-📍 João Pessoa - PB · Análise e Desenvolvimento de Sistemas
+### O que eu faço
 
-### Como eu construo com LLM
-
-- **O modelo interpreta, o código decide.** Saída em JSON validado por schema; fluxo e efeitos colaterais ficam em código testável.
-- **Grounding.** O agente responde só com a base aprovada; o resto vai para uma pessoa.
-- **Falha previsível.** Timeout ou resposta inválida têm uma nova tentativa e depois caem num caminho seguro.
-- **Eval antes de trocar de modelo.** Acerto e latência medidos em cada candidato.
+Desenvolvo com workflow agêntico como método, não como atalho: fecho um harness em volta do modelo (skills, hooks, guardrails, evals e contexto versionado) para entregar sistemas observáveis, manuteníveis e prontos para escalar, com cada decisão técnica ligada ao planejamento do projeto e a um resultado de negócio.
 
 ### Projetos
 
-**[Agente de suporte no WhatsApp](https://github.com/cauedev30/chatbot-atendimento-geniai)** `código aberto`\
-Agente LLM como bot do Chatwoot: identifica o cliente, abre o ticket, responde pelo FAQ com grounding, transcreve áudio, lê imagem e transfere para humano. Kanban e indicadores para a equipe. A triagem, que era manual, passou a ser 100% automática. Arquitetura em camadas com portas e adaptadores, outbox, eval próprio e 785 testes.\
-`Python` `FastAPI` `PostgreSQL` `Next.js` `Pytest` `Playwright`
+**Agente de atendimento no WhatsApp** `código fechado`\
+Construí de ponta a ponta um agente LLM que identifica o cliente, abre o ticket e responde com grounding em uma base de conhecimento curada. Entende áudio e imagem do cliente. A triagem, que era manual, passou a ser 100% automática. Organizei os tickets em kanban e fiz um painel de monitoramento e indicadores.
 
 **Automação de provisionamento no Chatwoot** `código fechado`\
-Uma automação idempotente e parametrizada que cria usuário, times, regras e inboxes em cerca de 20 contas de uma rede de franquias de saúde. Confere banco e Chatwoot antes de escrever e para em vez de gravar pela metade.\
-`n8n` `Python` `Supabase` `API do Chatwoot`
+Uma automação idempotente e parametrizada que cria usuário, times, regras e inboxes em cerca de 20 contas no Chatwoot, de uma rede de franquias de saúde. Confere banco e Chatwoot antes de escrever.
 
-**Site de pedidos para restaurante no edge** `código fechado` `freelance`\
-Cardápio digital com sacola que fecha o pedido no WhatsApp, e painel com senha para a dona abrir o dia e desligar item esgotado.\
-`Next.js` `Cloudflare Workers` `Workers KV` `Vitest`
+**Site de pedidos para restaurante** `código fechado` `freelance`\
+Next.js no edge da Cloudflare, com painel autenticado, organizando os pedidos e otimizando o fluxo de trabalho.
 
 **Plataforma de governança de contratos** `código fechado` `produto interno`\
-Gestão de contratos de aluguel com extração de dados via LLM, RLS e TDD. Encontrei e corrigi uma falha de autorização (IDOR) no próprio código, com testes de regressão.\
-`Next.js` `TypeScript` `Supabase` `Vitest`
+Gestão de contratos de aluguel com extração de dados via LLM, RLS e TDD.
 
-### Engenharia assistida por IA
+### Foco atual
 
-Claude Code com skills e hooks por projeto, contexto versionado (estado, decisões e specs), MCP servers e aprovação humana antes de qualquer ação irreversível. Toda feature nasce com critério de aceite executável e só fecha quando ele roda verde.
+- Arquitetura de modelos agênticos
+- MCP e tool use
+- Desenvolvimento assistido por IA, seguindo a arquitetura do projeto
 
 ### Stack
 
-**IA aplicada:** LLMs · RAG · embeddings e bancos vetoriais · agentes e multiagentes · function calling · MCP · context engineering · evals · n8n\
-**Full stack:** Python · FastAPI · TypeScript · Node.js · React · Next.js · PostgreSQL/Supabase · Docker · Cloudflare Workers · GitHub Actions · Pytest · Vitest · Playwright
+**IA aplicada:** LLMs · RAG · embeddings e bancos de dados vetoriais · agentes e sistemas multiagentes · harness · function calling · MCP · prompt e context engineering · evals e controle de custo de tokens
+
+**Back-end e full stack:** Python · FastAPI · SQLAlchemy · TypeScript · Node.js · React · Next.js · PostgreSQL (Supabase, RLS) · APIs REST e webhooks · Clean Architecture · Docker · Dokku · CI/CD com GitHub Actions · Pytest · Vitest · Playwright · Cloudflare Workers
 
 ### Outros repositórios
 
@@ -45,3 +39,5 @@ Claude Code com skills e hooks por projeto, contexto versionado (estado, decisõ
 ### Contato
 
 [LinkedIn](https://www.linkedin.com/in/cauefranco01/) · cauefranco01@gmail.com
+
+📍 João Pessoa - PB · Análise e Desenvolvimento de Sistemas
