@@ -25,7 +25,7 @@ Não entrego só features. Construo sistemas observáveis e fáceis de manter, e
 
 [**chatbot-atendimento-geniai**](https://github.com/cauedev30/chatbot-atendimento-geniai)
 
-Mesa de suporte da GeniAI: um agente LLM que roda como bot do Chatwoot, um kanban para a equipe e uma página de indicadores.
+Mesa de suporte da GeniAI: um agente LLM que roda como bot do Chatwoot, um kanban para a equipe e uma página de indicadores. A triagem, que era manual, passou a ser feita pelo agente, acelerando a etapa em 100%.
 
 **O que o agente faz.** Identifica o atendente da unidade pelo telefone e abre o ticket na hora. Tenta uma resposta do FAQ, enviada exatamente como a equipe escreveu, e responde até três dúvidas sobre ela usando só a base de conhecimento daquele item. Pergunta fora da base, quarta pergunta ou pedido de atendente vão para uma pessoa, com o resumo no ticket. Junta rajadas de mensagens curtas num turno só, lê imagens e transcreve áudios, que passam a valer como texto em todas as regras.
 
@@ -38,6 +38,7 @@ Mesa de suporte da GeniAI: um agente LLM que roda como bot do Chatwoot, um kanba
 - Eval próprio: casos fictícios rodam contra cada modelo candidato e medem detecção de pedido humano (o gate exige 100%), acerto de categoria e de FAQ, perguntas de esclarecimento, leitura de imagem e latência p50/p95.
 - Sincronização nos dois sentidos com o Chatwoot: fechar o card resolve a conversa, e resolver a conversa fecha o card.
 - Indicadores por período e unidade: volume, taxa de resolução pelo bot, mapa de calor unidade × categoria, tempos de espera e saúde do FAQ.
+- **785 testes automatizados:** 727 no back-end (Pytest, espelhando o pacote) e 58 no front-end (Vitest), mais um smoke test de ponta a ponta com Playwright.
 
 ```mermaid
 flowchart LR
@@ -62,13 +63,13 @@ flowchart LR
 
 **Stack:** n8n · Python · API REST do Chatwoot · PostgreSQL/Supabase
 
-#### Loja com catálogo gerenciado no edge `código fechado` `freelance`
+#### Site de pedidos para restaurante no edge `código fechado` `freelance`
 
-**O problema.** Uma loja de moda praia precisava de um catálogo online que a própria dona conseguisse manter, sem depender de desenvolvedor a cada produto novo ou tamanho esgotado.
+**O problema.** O pedido precisava chegar organizado no WhatsApp, e a própria dona precisava conseguir avisar que um item acabou ou que o dia está fechado, sem depender de desenvolvedor.
 
-**O que construí.** Site em Next.js exportado como estático e servido por um Cloudflare Worker. A dona da loja tem um painel próprio, atrás de senha, para cadastrar produto, marcar tamanho esgotado e publicar sozinha. O pedido sai da sacola direto para o WhatsApp, já com os dados do cliente. Deploy automático pelo GitHub Actions a cada push. Tudo o que muda de um cliente para outro fica num único arquivo de configuração, então o projeto serve de base para outras lojas.
+**O que construí.** Cardápio digital em Next.js rodando no edge da Cloudflare (Workers via OpenNext). O cliente monta a sacola, preenche os dados e finaliza no WhatsApp da loja com a mensagem já organizada. A única parte de servidor é um painel autenticado por senha, onde a dona abre e fecha o dia e desliga o item que acabou, com o estado guardado no Workers KV. Testes com Vitest e Testing Library.
 
-**Stack:** Next.js · TypeScript · Cloudflare Workers · Cloudflare D1 · GitHub Actions
+**Stack:** Next.js 16 · React 19 · Cloudflare Workers · OpenNext · Workers KV · Vitest
 
 #### Plataforma de governança de contratos `código fechado` `produto interno`
 
