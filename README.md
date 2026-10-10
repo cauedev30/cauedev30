@@ -1,6 +1,7 @@
 ## Cauê Franco
 
-**AI Full Stack Engineer.** Construo agentes de LLM e o produto inteiro em volta deles: back-end, interface, integrações e deploy. Hoje na **GeniAI**.
+**AI Full Stack Engineer.** Construo agentes de LLM e o produto inteiro em volta deles: back-end, interface, integrações e deploy.
+Atualmente na **GeniAI**.
 
 ### O que eu faço
 
